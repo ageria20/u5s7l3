@@ -40,6 +40,9 @@ public class U5s7l3Application {
         List<Sezione> pageList = new ArrayList<>();
         pageList.add(sezione);
         List<String> authorList = new ArrayList<>();
+        authorList.add("Andrea");
+        authorList.add("Michele");
+        authorList.add("Mirko");
         Libro libro = new Libro(pageList, 4.99, authorList);
         libro.printPage();
     }
