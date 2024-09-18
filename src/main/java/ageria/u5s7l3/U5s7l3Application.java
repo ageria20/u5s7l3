@@ -41,8 +41,7 @@ public class U5s7l3Application {
         pageList.add(sezione);
         List<String> authorList = new ArrayList<>();
         Libro libro = new Libro(pageList, 4.99, authorList);
-        System.out.println(libro);
-        System.out.println(libro.getPages());
+        libro.printPage();
     }
 
 }

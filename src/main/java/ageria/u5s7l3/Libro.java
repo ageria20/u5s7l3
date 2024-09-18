@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Setter
 @Getter
@@ -22,15 +23,16 @@ public class Libro implements Element {
     }
 
     @Override
-    public String printPage() {
-        return this.paginaList.stream().map(pagina -> pagina.getContent()).toString();
+    public void printPage() {
+        System.out.println("-------------------------------");
+        System.out.println("Titolo:");
+        this.paginaList.stream().map(pagina -> pagina.getTitle()).forEach(System.out::println);
+        System.out.println("Contenuto:");
+        this.paginaList.stream().map(pagina -> pagina.getContent()).forEach(System.out::println);
+        System.out.println("Price: " + this.price);
+        System.out.println("Autori: " + this.authorList.stream().collect(Collectors.joining()));
+        System.out.println("-------------------------------");
+
     }
 
-    @Override
-    public String toString() {
-        return "Libro -> " +
-                " paginaList: " + paginaList +
-                ", price: " + price +
-                ", authorList: " + authorList;
-    }
 }

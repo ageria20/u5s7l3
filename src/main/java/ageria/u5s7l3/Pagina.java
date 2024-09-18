@@ -18,8 +18,8 @@ public class Pagina implements Element {
     }
 
     @Override
-    public String printPage() {
-        return this.content;
+    public void printPage() {
+        System.out.println(this.content);
     }
 
     @Override
