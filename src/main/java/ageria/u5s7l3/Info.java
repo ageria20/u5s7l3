@@ -37,4 +37,12 @@ public class Info {
     public void setDataDiNascita(Date dataDiNascita) {
         this.dataDiNascita = dataDiNascita;
     }
+
+    @Override
+    public String toString() {
+        return
+                "Nome: '" + nome + '\'' +
+                        ", Cognome: '" + cognome + '\'' +
+                        ", Data di Nascita: " + dataDiNascita;
+    }
 }
