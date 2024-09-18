@@ -1,5 +1,6 @@
-package ageria.u5s7l3;
+package ageria.u5s7l3.es2;
 
+import ageria.u5s7l3.Element;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;

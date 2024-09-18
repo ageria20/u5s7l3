@@ -1,17 +1,16 @@
 package ageria.u5s7l3.adapter;
 
+import ageria.u5s7l3.DataSource;
 import ageria.u5s7l3.Info;
-import ageria.u5s7l3.UserData;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
 
-public class UserInfoAdapter extends UserData {
+public class UserInfoAdapter implements DataSource {
     private Info info;
 
 
-    public UserInfoAdapter(String nomeCompleto, int eta, Info info) {
-        super(nomeCompleto, eta);
+    public UserInfoAdapter(Info info) {
         this.info = info;
     }
 

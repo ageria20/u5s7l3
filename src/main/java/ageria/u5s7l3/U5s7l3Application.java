@@ -1,6 +1,9 @@
 package ageria.u5s7l3;
 
 import ageria.u5s7l3.adapter.UserInfoAdapter;
+import ageria.u5s7l3.es2.Libro;
+import ageria.u5s7l3.es2.Pagina;
+import ageria.u5s7l3.es2.Sezione;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -22,7 +25,7 @@ public class U5s7l3Application {
         Info infoUser = new Info("Andrea", "Geria", birthDate);
         UserData us = new UserData(infoUser.getNome() + infoUser.getCognome(), 29);
 
-        UserInfoAdapter userInfoAdapter = new UserInfoAdapter(us.getNomeCompleto(), us.getEta(), infoUser);
+        UserInfoAdapter userInfoAdapter = new UserInfoAdapter(infoUser);
 
         if (userInfoAdapter.getNomeCompleto().startsWith(infoUser.getNome())) {
             System.out.println("The nams starts with same letter");
