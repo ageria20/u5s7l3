@@ -14,5 +14,10 @@ public class Sezione extends Pagina {
         this.title = title;
     }
 
-
+    @Override
+    public String toString() {
+        return "Sezione: " +
+                " title:'" + title +
+                " content: " + this.getContent();
+    }
 }
